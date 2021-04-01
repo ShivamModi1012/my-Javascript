@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<body>
+    <lable>Enter the size of array you want: </lable>
+    <input type="text" id="size"><br><br>
+    <button onclick="addele()">Add Elements</button><br><br>
+    <button onclick="display()">Show Array</button><br><br>
+    <button onclick="max()">Largest Element</button><br><br>
+    <button onclick="min()">Smallest Element</button><br><br>
+    <button onclick="SecondLarg()">Second Largest</button><br><br>
+    <button onclick="SecondSmall()">Second Smallest</button><br><br>
+    <button onclick="addnew()">Add new Element</button><br><br>
+    <button onclick="remove()">Remove an Element</button>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <p id="p6"></p>
+    <p id="p7"></p>
+    <script>
+      var n=0,arr;
+        function addele()
+        {
+            var len=document.getElementById("size").value;
+            n=len;
+            arr=new Array(n);
+            for(var i=0;i<n;i++)
+                arr[i]=prompt("Enter value: ");
+        }
+        function display()
+        {
+                document.getElementById("p1").innerHTML=arr+",";
+        }
+        function max()
+        {
+            arr.sort(function(a,b){return(a-b)});
+            document.getElementById("p2").innerHTML="The largest element in the given array is : "+arr[n-1];
+        }
+        function min()
+        {
+             arr.sort(function(a,b){return(a-b)});
+            document.getElementById("p3").innerHTML="The smallest elementof the array is: "+arr[0];
+        }
+        function SecondLarg()
+        {
+             arr.sort(function(a,b){return(a-b)});
+            document.getElementById("p4").innerHTML="Th second largest element of the array is: "+arr[n-2];
+        }
+        function SecondSmall()
+        {
+             arr.sort(function(a,b){return(a-b)});
+            document.getElementById("p5").innerHTML="The second smallest element of the given array is: "+arr[1];
+        }
+        function addnew()
+        {
+            var a=prompt("Enter element you want to add to the array: ");
+            arr.push(a);
+             document.getElementById("p6").innerHTML="The array after adding a new element is: "+arr;
+        }
+        function remove()
+        {
+            arr.pop();
+             document.getElementById("p7").innerHTML="The array after removing a element is: "+arr;
+        }
+    </script>
+    </body>
+</html>

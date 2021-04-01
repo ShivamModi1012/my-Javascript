@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<body>
+    <ul type="disk" id="list"><li>Milk</li><li>Coffee</li></ul>
+    <button onclick="add()">Append</button>
+    <button onclick="remove()">Remove</button>
+    <button onclick="addbefore()">Add At</button>
+    <button onclick="replace()">Replace</button>
+    <script>
+    function add()
+        {
+            var a=document.createElement("li");
+            var c=prompt("Enter element you want to add to the list: ");
+            var b=document.createTextNode(c);
+            a.appendChild(b);
+            list.appendChild(a);
+        }
+        function remove()
+        {
+            var a=prompt("Enter item number which you want to remove: ");
+            list.removeChild(list.childNodes[a-1]);
+        }
+        function replace()
+        {
+            var a=prompt("Enter the element number you want to replace: ");
+            var b=prompt("Enter the new item you want to add to the list: ");
+            var d=document.createElement("li");
+            var c=document.createTextNode(b);
+            d.appendChild(c);
+            list.replaceChild(d,list.childNodes[a-1]);
+        }
+        function addbefore()
+        {
+            var a=prompt("Enter the position before which you want to add a new element: ");
+            var b=prompt("Enter the element you want to add: ");
+            var d=document.createElement("li");
+            var c=document.createTextNode(b);
+            d.appendChild(c);
+            list.insertBefore(d,list.childNodes[a-1]);
+        }
+    </script>
+        </body>
+</html>

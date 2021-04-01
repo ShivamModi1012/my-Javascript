@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+<script>
+function abc()
+{
+var num=document.getElementById("a").value;
+var num1=document.getElementById("b").value;
+if(num%100==num1%100)
+document.write("Same");
+else
+document.write("Not Same");
+}
+</script>
+<body>
+First <input type="number" id="a"> <br>Second <input type="number" id="b"><br><input type="submit" value="check" onclick="abc()">
+</body>
+</html>

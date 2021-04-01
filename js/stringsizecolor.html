@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+
+<script>
+
+function abc()
+{
+var x=document.getElementById('aa');
+x.value=x.value.toUpperCase();
+}
+
+function inp()
+{
+document.getElementById("aa").style.color="red";
+}
+
+</script>
+
+<body>
+Name: <input type="text" id="aa" value="abc" onmouseout="abc()" onmouseover="inp()">
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype>
+<html>
+<head>
+<script>
+function abc()
+{
+var a1=document.getElementById("a").value;
+var i,j;
+for(i=1;i<=a1;i++)
+{
+  for(j=1;j<=i;j++)
+   {
+	document.write("*");
+   }
+    document.write("<br>");
+}
+}
+</script>
+</head>
+<body>
+Enter number: <input type="number" id="a"><input type="submit" value="Print" onclick="abc()">
+</body>
+</html>

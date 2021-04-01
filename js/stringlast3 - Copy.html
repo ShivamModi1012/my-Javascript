@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head>
+<script>
+function abc(){
+var a=document.getElementById("a").value;
+var l=a.length;
+var last=a.slice(l-3,l);
+document.write(last+a+last);
+</script>
+</head>
+<body>
+Input a string: <input type="text" id="a"><br><input type="submit" value="do" onclick="abc()">
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<body>
+<button onclick="abc()">Create Table</button>
+<table id="t" border="2"></table>
+<script>
+function abc()
+{
+var a=prompt("Enter number of rows");
+var b=prompt("Enter number of columns");
+var i,j;
+for(i=1;i<=a;i++)
+{
+	var c=document.createElement("tr");
+	for(j=1;j<=b;j++)
+	{
+		var d=document.createElement("td");
+		var e=document.createTextNode(i*j);
+		d.appendChild(e);
+		c.appendChild(d);
+	}
+	document.getElementById("t").appendChild(c);
+}
+}
+</script>
+</body>
+</html>

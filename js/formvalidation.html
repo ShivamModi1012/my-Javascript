@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<body>
+    <script>
+        var a1=document.getElementById("uname").value;
+        var a2=document.getElementById("name").value;
+        var a3=document.getElementById("mobile").value;
+        var a4=document.getElementById("email").value;
+        var a5=document.getElementById("e").value;
+        var a6=document.getElementById("f").value;
+        var a7=document.getElementById("g").value;
+        var a8=[A-Za-z]+[0-9]+;
+        var a9=[A-Za-z];
+        var a10=[A-Za-z]+[0-9]+@[a-z]+.com;
+        var a11=\d{10};
+        if(!(a1.match(a8)))
+            alert("Please enter a valid username.");
+        if(a2.match(a9)!=1)
+            window.alert("Please enter a valid name");
+        if(a3.match(a11)!=1)
+            window.alert("Please enter a valid mobile number");
+        if(a4.match(a10)!=1)
+            window.alert("Please enter a valid Email ID.");
+                             
+    </script>
+    <fieldset><legend align="center">Form Page</legend><table>
+        <tr>
+        <td>Username</td><td><input type="text" id="uname"></td><td id="a"></td></tr>
+          <tr>
+        <td>Name</td><td><input type="text" id="name"></td><td id="b"></td></tr>
+          <tr>
+        <td>Mobile Number</td><td><input type="number" id="mobile"></td><td id="c"></td></tr>
+          <tr>
+        <td>Email ID</td><td><input type="text" id="email"></td><td id="d"></td></tr>
+          <tr>
+        <td>Password</td><td><input type="password" id="passwrd"></td><td id="e"></td></tr>
+          <tr>
+        <td>Confirm Password</td><td><input type="password" id="confirm"></td><td id="f"></td></tr>
+          <tr>
+              <td>Comment</td><td><textarea rows="5" cols="20" id="comment" maxlength="20"></textarea></td><td id="g"></td></tr>
+        <tr><td colspan="3" align="center"><button onclick="check()">Submit</button></td></tr>
+        </table></fieldset>
+    </body>
+</html>

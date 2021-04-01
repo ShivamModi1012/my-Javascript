@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<script>
+function abc()
+{
+
+var a1=document.getElementById("aa").value;
+if(a1==1)
+{
+window.alert("Uum...U can't");
+}
+if(a1==2)
+{
+window.alert("Yeah...U can");
+}
+if(a1==3)
+{
+window.alert("U r too old");
+}
+}
+</script>
+</head>
+<body>
+<fieldset>
+<legend>Permission</legend>
+Age: <select id="aa" onclick="abc()">
+                 <option>Select</option>
+		<option value="1">Under 18</option>
+		<option value="2">18 to 40</option>
+		<option value="3">Above 40</option>
+</select>
+</fieldset>
+</body>
+
+</html>

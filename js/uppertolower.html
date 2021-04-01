@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<script>
+function abc()
+{
+var str=document.getElementById("a").value;
+var l=str.length;
+for(var i=0;i<l;i++)
+{
+if(str.[i]>='a' && str[i]<='z')
+str[i]-=32;
+else if(str[i]>='A' && str[i]<='Z')
+str[i]+=32;
+}
+for(i=0;i<l;i++)
+{
+document.write(str[i]);
+}
+}
+</script>
+</head>
+<body>
+Enter the string: <input type="text" id="a"><input type="submit" value="convert" onclick="abc()">
+</body>
+</html>

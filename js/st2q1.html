@@ -1,0 +1,22 @@
+<!doctyep html>
+<html>
+<head>
+</head>
+<body>
+<h1>Is the String having a date!!</h1>
+<input type="text id="aa">
+<button onclick="date()">Any Date?</button>
+<script>
+function date()
+{
+var a=document.getElementById("aa").value;
+var b=a.toString();
+var c=(/^(\d{1,2})-(\d{1,2})-(\d{4})$/);
+if(a.match(c))
+window.alert("Yes, the given string has a date");
+else
+window.alert("No, the given string doesnot have date");
+}
+</script>
+</body>
+</html>

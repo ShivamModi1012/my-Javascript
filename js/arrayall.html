@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<body>
+Enter number of element in array: <input type="text" id="a">
+<button onclick="add()">Add</button>
+<button onclick="display()">Display</button>
+<button onclick="maxi()">Max</button>
+<button onclick="mini()">Min</button>
+<button onclick="newele()">Push</button>
+<button onclick="rem()">Pop</button>
+<p id="aa"></p>
+<p id="dis"></p>
+<p id="bb"></p>
+<p id="dd"></p>
+<p id="cc"></p>
+<script>
+var arr,n=0;
+function add()
+{
+var l=document.getElementById("a").value;
+n=l;
+arr=new Array(l);
+for(var i=0;i<l;i++)
+arr[i]=prompt("Enter element: ");
+}
+function display()
+{
+document.getElementById("aa").innerHTML="Provided array is: "+arr;
+}
+function maxi()
+{
+arr.sort(function(a,b){return(a-b)});
+document.getElementById('dis').innerHTML="The largest element of the given array is: "+arr[n-1];
+}
+function mini()
+{
+arr.sort(function(a,b){return(a-b)});
+document.getElementById('bb').innerHTML="The smallest element of the givven array is: "+arr[0];
+}
+function newele()
+{
+arr.push(prompt("Enter element"));
+document.getElementById("dd").innerHTML="Updated Array after adding new element to the array: "+arr+",";
+}
+function rem()
+{
+arr.pop();
+document.getElementById("cc").innerHTML="Updated Array after last element of the array: "+arr+",";
+}
+</script>
+</body>
+</html>

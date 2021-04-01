@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<script>
+function abc()
+{
+var g=a;
+
+
+var d=new Date();
+var e=d.getHours();
+var f=d.getMinutes();
+document.getElementById('bb').innerHTML="+e+":"+f";
+if(e>=1&&e<=12)
+document.getElementById('aa').innerHTML="Hello shivam,good morning.";
+if(e>=13&&e<=15)
+document.getElementById('aa').innerHTML="Hello shivam,good afternoon.";
+if(e>=15&&e<=18)
+document.getElementById('aa').innerHTML="Hello shivam,good evening.";
+if(e>=18&&e<=24)
+document.getElementById('aa').innerHTML="Hello shivam,good night.";
+}
+</script>
+</head>
+<body>
+Name: <input type="text" id="a"> 
+<input type="submit" value="WISH ME" onclick="abc()">
+<p id="bb"></p>
+<p id="aa"></p>
+</body>
+</html>

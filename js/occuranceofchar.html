@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<script>
+function abc()
+{
+var s=document.getElementById("a").value;
+//document.write(s);
+var c=document.getElementById("b").value;
+//document.write(c);
+var count=0;
+var l;
+l=s.length;
+//document.write(l);
+for (var i=0;i<l;i++)
+{
+	if (s.charAt(i)==ch)
+		{
+		count+=1;
+		}
+}
+document.write(count);
+}
+</script>
+</head>
+<body>
+Enter a String: <input type="text" id="a"><br>
+Enter character whose occurance is to be counted: 
+<input type="text" id="b"><br>
+<input type="submit" value="count" onclick="abc()">
+</body>
+</html>

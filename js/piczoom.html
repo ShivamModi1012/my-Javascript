@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<script>
+function zoomin()
+{
+document.getElementById('im').setAttribute("id","abc");
+}
+function zoomout()
+{
+document.getElementById('im').setAttribute("id","def");
+}
+</script>
+<style>
+#abc{
+height:400px;
+width:400px;
+}
+#def{
+height:100px;
+width:100px;
+}
+</style>
+</head>
+<body>
+<img src="a.jpg" height="100px" width="100px" onmouseover="zoomin()" onmouseout="zoomout()" id="im">
+<img src="b.jpg" height="100px" width="100px" onmouseover="zoomin()" onmouseout="zoomout()" id="im">
+<img src="b1.jpg" height="100px" width="100px" onmouseover="zoomin()" onmouseout="zoomout()" id="im">
+</body>
+</html>

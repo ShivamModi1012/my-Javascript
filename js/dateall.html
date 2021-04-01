@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+    <style> 
+        pre{
+            position:relative;
+                    }
+        .a{
+            border-radius:150px;
+            border:1px dashed;
+            width:200px;
+            height:200px;
+            margin-left:auto;
+            margin-right:auto;
+           }
+        button{
+            align-items:center;
+        }
+        
+        </style>
+       </head>
+<body>
+    <p id="date"></p>
+  <center><h1>Wish Me!!</h1></center>
+    <div class ="a">
+      <h1><center>Current<br>Time:<p id="time"></p></center></h1></div> <br><br>
+   <center> <input type="text" id="name">
+       <button onclick="wishme()">Wish Me!</button></center>
+    <script>
+      var a = new Date();
+        var b=a.getHours();
+        var c=a.getMinutes();
+        var d=a.toDateString();
+        document.getElementById("time").innerHTML="<h3>"+b+":"+c+"</h3>";
+        document.getElementById("date").innerHTML="<h4>"+d+"</h4>";
+        function wishme()
+        {
+            var me=document.getElementById("name").value;
+            if(b>=2&&b<=12)
+                alert("Good Morning "+me+"! Have a nice day ahead.");
+            else if(b>=12&&b<=15)
+                alert("Good Afternoon "+me+".");
+            else if(b>=15&&b<=20)
+                alert("Good Evening "+me+".");
+            else
+                alert("Good Night "+me+". Sweet dreams.");
+        }
+    </script>
+</body>
+</html>

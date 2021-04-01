@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<script>
+function abc()
+{
+var a=new Date();
+var b=a.getHours();
+var c=a.getMinutes();
+var d=a.getSeconds();
+var e=a.getDay();
+//document.getElementById('a').innerHTML=b;
+//document.getElementById('a').innerHTML=c;
+//document.getElementById('a').innerHTML=d;
+if(b>=9&&b<=12)
+document.getElementById('a').innerHTML="Hello Shivam! Good Morning. Time is" +b+":"+c+":"+d;
+else if(b>12&&b<=15)
+document.getElementById('a').innerHTML="Hello Shivam! Good Afternoon. Time is" +b+":"+c+":"+d;
+else if(b>15&& b<=18)
+document.getElementById('a').innerHTML="Hello Shivam! Good Evening. Time is" +b+":"+c+":"+d;
+else if(b>18&&b<=24)
+document.getElementById('a').innerHTML="Hello Shivam! Good Night. Time is" +b+":"+c+":"+d;	
+switch(e){
+case 0:
+document.getElementById('aa').innerHTML="Today is Sunday";
+break;
+case 1:
+document.getElementById('aa').innerHTML="Today is Monday";
+break;
+case 2:
+document.getElementById('aa').innerHTML="Today is Tuesday";
+break;
+case 3:
+document.getElementById('aa').innerHTML="Today is Wednesday";
+break;
+case 4:
+document.getElementById('aa').innerHTML="Today is Thursday";	
+break;
+case 5:
+document.getElementById('aa').innerHTML="Today is Friday";	
+break;
+default:
+document.getElementById('aa').innerHTML="Today is Saturday";	}
+
+}
+</script>
+</head>
+<body>
+<input type="submit" value="Wish Me" onclick="abc()">
+<p id="a"></p>
+<p id="aa"></p>
+</body>
+</html>

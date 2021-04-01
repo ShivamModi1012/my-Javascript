@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <body>
+        Name: <input type="text" id="name" onfocus="check()">
+        <span id="dfg"></span>
+        <script>
+            
+           function check()
+            {
+                var a=document.getElementById("name").value;
+                //var c=//;
+            var b=/(?=.[A-Z]{1,})(?=.[a-z]{1,})(?=.[0-9]{1,})(?=.{6,})/g;
+                //var aa=b.test(a);
+               // alert(aa);
+                
+                
+                if(a.length==0)
+document.getElementById("dfg").innerHTML="Please enter some input.";
+                else if(a.match(b))
+               document.getElementById("dfg").innerHTML="Correct name format.";
+                else
+            document.getElementById("dfg").innerHTML="Please enter a correct format.";
+            }
+        </script>
+    </body>
+</html>

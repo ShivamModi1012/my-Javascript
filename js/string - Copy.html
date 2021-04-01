@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<script>
+function abc()
+{
+var ch=document.getElementById("a").value;
+var f=ch.slice(0,1);
+//document.write(f);
+var last=ch.slice(-1);
+//document.write(last);
+var l=ch.length;
+var rem=ch.slice(1,l-1);
+//document.write(rem);
+document.write(last+rem+f);
+
+
+}
+</script>
+</head>
+<body>A: <input type="text" id="a"><input type="submit" value="swap" onclick="abc()">
+</body>
+</html>

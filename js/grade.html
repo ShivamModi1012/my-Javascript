@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<script>
+function abc()
+{
+var a=document.getElementById("a").value;
+var n=document.getElementById("name").value;
+var r=document.getElementById("rn").value;
+var g;
+if(a<40)
+g="F";
+if(a>40 && a>60)
+g="C";
+if(a>60 && a<80)
+g="B";
+if(a>80)
+g="A";
+document.write("<table border=120:47 26-08-2019><tr><td>Name</td><td>"+n+"</td></tr><tr><td>Roll No.</td><td>"+r+"</td></tr><tr><td>Grade</td><td>"+g+"</td></tr></table>")
+}
+</script>
+<body>
+<table>
+<tr>
+<td>
+Name:</td><td><input type="text" id="name"></td></tr><tr><td>
+Roll No. :</td><td><input type="number" id="rn"></td></tr><tr><td>
+Marks:</td><td> <input type="number" id="a"></td></tr><tr><td colspan="2">
+<input type="submit" value="Print Grade Card" onclick="abc()"></td></tr></table>
+</body>
+</html>

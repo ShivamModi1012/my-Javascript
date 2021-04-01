@@ -1,0 +1,48 @@
+<!doctyep html>
+<html>
+<head>
+<script>
+var len=0,arr;
+function abc()
+{
+var n=document.getElementById("a").value;
+len=n;
+arr=new Array(len);
+for(var i=0;i<len;i++)
+arr[i]=prompt("Enter Elements: ");
+}
+function print()
+{
+for(var i=0;i<len;i++)
+document.write(arr[i]+" ");
+}
+function max_element(){
+var max=arr[0];
+for(var i=0;i<len;i++)
+{
+if(arr[i]>=max)
+max=arr[i];
+}
+window.alert(max);
+}
+function min_element(){
+var min=arr[0];
+for(i=0;i<len;i++)
+{
+if(arr[i]<=min)
+min=arr[i];
+}
+window.alert(min);
+}
+</script>
+</head>
+<body>
+Enter length of array: <input type="text" id="a">
+<input type="submit" value="add" onclick="abc()">
+<input type="submit" value="Print" onclick="print()">
+<p id="b"></p>
+<input type="submit" value="Max" onclick="max_element()">
+<input type="submit" value="Min" onclick="min_element()">
+
+</body>
+</html>

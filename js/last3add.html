@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<script>
+function abc()
+{//document.write("hello");
+var ch=document.getElementById("a").value;
+var y="y";
+var ies="ies";
+var l=ch.length;
+//document.write(l);
+var last=ch.slice(l-1);
+//document.write(last);
+var rem1=ch.slice(0,l-1);
+//document.write(rem1);
+var last3=ch.slice(l-3);
+//document.write(last3);
+var rem3=ch.slice(0,l-3);
+//document.write(rem3);
+if (last==y)
+document.write(rem1+ies);
+if (last3==ies)
+document.write(rem3+y);
+if (last!=y && last3!=ies)
+document.write(ch+"s");
+}
+</script>
+</head>
+<body>
+Enter a string: <input type="text" id="a"><br><input type="submit" value="change" onclick="abc()"> 
+</body>
+</html>

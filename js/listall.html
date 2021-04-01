@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<body>
+    <ul type="disk" id="list">
+    <li>Milk</li>
+    <li>Coffee</li>
+    </ul><br><br>
+    <button onclick="addtolist()">Add New Item</button><br><br>
+    <button onclick="addbefore()">insert Before</button><br><br>
+    <button onclick="removeitem()">Remove Item</button><br><br>
+    <button onclick="addafter()">Add After</button><br><br>
+    <button onclick="replace()">Replace Item</button>
+    <script>
+    function addtolist()
+        {
+            var a=document.createElement("li");
+            var b=prompt("Enter Item you want to add to the list: ");
+            var c=document.createTextNode(b);
+            a.appendChild(c);
+            list.appendChild(a);
+        }
+        function addbefore()
+        {
+            var a=prompt("Enter position before which you want to add new Item: ");
+            var b=prompt("Enter Item you want to enter");
+            var c=document.createTextNode(b);
+            var d=document.createElement("li");
+            d.appendChild(c);
+            list.insertBefore(d,list.childNodes[a]);
+        }
+        function removeitem()
+        {
+            var a=prompt("Enter Item position you want to remove: ");
+            list.removeChild(list.childNodes[a]);
+        }
+        function addafter()
+        {
+            var a=prompt("Enter position after which you want to add new Item: ");
+            var b=prompt("Enter new Item: ");
+            var c=document.createTextNode(b);
+            var d=document.createElement("li");
+            d.appendChild(c);
+list.insertBefore(d,list.childNodes[a+1]);
+        }
+        function replace()
+        {
+            var a=prompt("Enter Item number which you want to replace: ");
+            var b=prompt("Enter new Item: ");
+            var c=document.createTextNode(b);
+            var d=document.createElement("li");
+            d.appendChild(c);
+            list.replaceChild(d,list.childNodes[a]);
+        }
+    </script>
+    </body>
+</html>

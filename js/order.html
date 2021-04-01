@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<body15:25 23-10-2019>
+<table border="1"><tr><td>Product</td><td>Cost</td></table>
+<br><button onclick="abc()">Add Items</button>
+<button onclick="rem()">Remove Items</button>
+<br><br>
+<table border="1" id="tab"></table>
+<script>
+function abc()
+{
+var a=prompt("Enter Item");
+var b=prompt("Enter cost");
+var c=document.createElement("tr");
+var d1=document.createElement("td");
+var d2=document.createElement("td");
+var e=document.createTextNode(a);
+var f=document.createTextNode(b);
+d1.appendChild(e);
+d2.appendChild(f);
+c.appendChild(d1);
+c.appendChild(d2);
+document.getElementById("tab").appendChild(c);
+}
+function rem()
+{
+	c.remove();
+
+}
+</script>
+</body>
+</html>
